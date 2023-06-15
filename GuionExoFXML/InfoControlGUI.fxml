@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="480.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="us.ihmc.eva.GuiOnExo.InfoControlGUIController">
+   <children>
+      <VBox prefHeight="330.0" prefWidth="400.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="474.0" style="-fx-background-color: grey;">
+               <children>
+                  <Label fx:id="batteryLevelText" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="48.0" style="-fx-background-color: white;" text="100%">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ProgressBar fx:id="batteryLevelProgressBar" prefHeight="37.0" prefWidth="425.0" progress="1.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="errorMessage" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="480.0" style="-fx-background-color: white;" text="" textFill="RED" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ListView fx:id="controlModeChoice" prefHeight="150.0" prefWidth="480.0" style="-fx-background-color: white;" />
+            <HBox prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="Control Mode:" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="conrtolModeRunning" prefHeight="50.0" prefWidth="350.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="3.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="3.0" right="3.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
